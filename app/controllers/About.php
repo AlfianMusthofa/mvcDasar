@@ -7,6 +7,8 @@ class About extends Controller
         $data['judul'] = 'About';
         $data['nama'] = $nama;
         $data['status'] = $status;
+        $data['css'] = 'about.css';
+        $data['nama'] = $this->model('User_model')->getUser();
         $this->view('templates/header', $data);
         $this->view('about/index', $data);
         $this->view('templates/footer');
